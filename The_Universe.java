@@ -46,7 +46,7 @@ public class The_Universe extends javax.swing.JFrame {
         BotRig = new javax.swing.JPanel();
         BotRigName = new javax.swing.JLabel();
         BotLef = new javax.swing.JPanel();
-        BotLefName = new javax.swing.JLabel();
+        PFlynnNameTag = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,7 +72,7 @@ public class The_Universe extends javax.swing.JFrame {
         TopRigLayout.setVerticalGroup(
             TopRigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TopRigLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(TopRigName, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -88,16 +88,16 @@ public class The_Universe extends javax.swing.JFrame {
         TopLefLayout.setHorizontalGroup(
             TopLefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TopLefLayout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
-                .addComponent(TopLefName, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(TopLefName, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
         TopLefLayout.setVerticalGroup(
             TopLefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TopLefLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(TopLefName, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addComponent(TopLefName, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         BotRig.setBackground(new java.awt.Color(88, 205, 58));
@@ -123,11 +123,13 @@ public class The_Universe extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
-        BotLef.setBackground(new java.awt.Color(255, 179, 0));
+        BotLef.setBackground(new java.awt.Color(255, 102, 51));
         BotLef.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        BotLefName.setIcon(new javax.swing.ImageIcon("C:\\Users\\frute\\Desktop\\Fall 2017\\CSE 360\\Pj1\\imgs\\PatrickFlynn.png")); // NOI18N
-        BotLefName.setText("jLabel3");
+        PFlynnNameTag.setBackground(new java.awt.Color(112, 195, 241));
+        PFlynnNameTag.setFont(new java.awt.Font("Sitka Small", 1, 40)); // NOI18N
+        PFlynnNameTag.setText(" Patrick Flynn");
+        PFlynnNameTag.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(51, 0, 204)));
 
         javax.swing.GroupLayout BotLefLayout = new javax.swing.GroupLayout(BotLef);
         BotLef.setLayout(BotLefLayout);
@@ -135,15 +137,15 @@ public class The_Universe extends javax.swing.JFrame {
             BotLefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotLefLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotLefName, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addComponent(PFlynnNameTag, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
         );
         BotLefLayout.setVerticalGroup(
             BotLefLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotLefLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotLefName, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addComponent(PFlynnNameTag, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         jSlider1.setForeground(new java.awt.Color(255, 255, 255));
@@ -230,16 +232,16 @@ public class The_Universe extends javax.swing.JFrame {
        if(!source.getValueIsAdjusting()){
            int boobay = source.getValue();
            if(boobay == 1){
-               TopRigName.setVisible(false);
+               
            }
            if(boobay == 2){
-               TopLefName.setVisible(false);
+               
            }
            if(boobay == 3){
-               BotRigName.setVisible(false);
+               
            }
-           if(boobay == 4){
-               BotLefName.setVisible(false);
+           if(boobay == 4 || boobay == 3 || boobay == 2 || boobay == 1){
+               BotLef.setVisible(false);
            }
        }
        
@@ -282,9 +284,9 @@ public class The_Universe extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BotLef;
-    private javax.swing.JLabel BotLefName;
     private javax.swing.JPanel BotRig;
     private javax.swing.JLabel BotRigName;
+    private javax.swing.JLabel PFlynnNameTag;
     private javax.swing.JPanel TopLef;
     private javax.swing.JLabel TopLefName;
     private javax.swing.JPanel TopRig;
